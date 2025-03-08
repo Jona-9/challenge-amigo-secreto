@@ -30,34 +30,25 @@ function limpiarCaja(){
 } 
  let aleatorio = Math.floor(Math.random()*amigos.length);
  let arrayAuxiliar= [];
-
+ 
  function sortearAmigo(){
+  let lista = document.querySelector("ul");
+while (lista.firstChild) {
+    lista.removeChild(lista.firstChild);
+}
 let CantidadAmigos = document.querySelector("ul");
 let li=document.createElement("li");
   console.log(amigos.length)
    aleatorio = Math.floor(Math.random()*amigos.length);
   console.log(aleatorio);
- /* if (arrayAuxiliar.length==amigos.length){
-    avisosdecambios("h2"," Felicidades acabaste el sorteo!")
-  } else if (arrayAuxiliar.includes(aleatorio)){
-    return sortearAmigo();
-    } else { */
-     if(arrayAuxiliar.length < amigos.length){
-    do{
+     if (arrayAuxiliar.length < amigos.length){
+    do {
       aleatorio = Math.floor(Math.random()*amigos.length);
-      }while(arrayAuxiliar.includes(aleatorio));
+      } while (arrayAuxiliar.includes(aleatorio));
       li.textContent=(`El amigo secreto sorteado es ${amigos[aleatorio]}`); 
       CantidadAmigos.appendChild(li);
        arrayAuxiliar.push(aleatorio);
-    }else{
+    } else {
       avisosdecambios("h2"," Felicidades acabaste el sorteo!")
     }
-    
 }
-/*do{
-aleatorio = Math.floor(Math.random()*amigos.length);
-}while(arrayAuxiliar.includes(aleatorio)){
-
-}  */
-//habilitar el otro botón y crear números aleatorios del tamaño 
- // de la matriz y desabilitar el botón añadir, para evitar erorres
