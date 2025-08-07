@@ -5,7 +5,7 @@ function avisosdecambios(tipo,  nuevoname){
   nombre.innerHTML=nuevoname;
 }
 // Agregué una función para notificar sobre algún cambio que se produzca más adelante
-// avisosdecambios("h2","Hola Jona");
+
 function agregarAmigo(){
 let CantidadAmigos = document.querySelector("ul");
 let li=document.createElement("li");
